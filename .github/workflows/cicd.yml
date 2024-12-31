@@ -17,13 +17,13 @@ jobs:
         run: docker build -t rahulmali8827/reactjs-app .
       - name: Publish image to docker hub
         run: docker push rahulmali8827/reactjs-app:latest 
-deploy:
-  needs: build
-  runs-on: aws-ec2
-  steps:
-    - name: Pull image from docker hub
-      run: docker pull rahulmali8827/reactjs-app:latest
-    - name: delete Old Container
-      run: docker rm -f reactContainer
+  deploy:
+    needs: build
+    runs-on: aws-ec2
+    steps:
+      - name: Pull image from docker hub
+        run: docker pull rahulmali8827/reactjs-app:latest
+      - name: delete Old Container
+        run: docker rm -f reactContainer
     - name: Run docker container
       run: docker run -d -p 3000:80 --name reactContainer rahulmali8827/reactjs-app
