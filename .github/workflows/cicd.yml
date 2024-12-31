@@ -25,10 +25,10 @@ jobs:
         run: docker pull rahulmali8827/reactjs-app:latest
       - name: delete Old Container
         run: docker rm -f reactContainer
-<<<<<<< HEAD
-    - name: Run docker container
-      run: docker run -d -p 3000:80 --name reactContainer rahulmali8827/reactjs-app
-=======
+
       - name: Run docker container
         run: docker run -d -p 3000:80 --name reactContainer rahulmali8827/reactjs-app
->>>>>>> 259a2b7 (deploy to ec2)
+
+      - name: Run docker container
+        run: docker run -d -p 3000:80 --name reactContainer rahulmali8827/reactjs-app
+
