@@ -25,10 +25,8 @@ jobs:
         run: docker pull rahulmali8827/reactjs-app:latest
       - name: delete Old Container
         run: docker rm -f reactContainer
-
       - name: Run docker container
         run: docker run -d -p 3000:80 --name reactContainer rahulmali8827/reactjs-app
-
       - name: Run docker container
         run: docker run -d -p 3000:80 --name reactContainer rahulmali8827/reactjs-app
 
