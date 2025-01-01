@@ -6,8 +6,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>Successfully deploye using gihub action and docker</h1>
-        
+        <h1>Successfully deploye using gihub action and docker and ec2 </h1>
+
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
